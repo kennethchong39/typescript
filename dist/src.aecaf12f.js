@@ -103,7 +103,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   // Override the current require with this new one
   return newRequire;
-})({15:[function(require,module,exports) {
+})({6:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
@@ -125,30 +125,15 @@ var Type2;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var interfaces_1 = require("./src/interfaces");
+var interfaces_1 = require("./interfaces");
 var isOpen = false;
 var myName = 'Scott';
 var myAge = 32.04;
 var list = [0, 1, 2];
 var me = ['Scot', 32, false];
-// enum Job {
-//   WebDev,
-//   WebDesigner,
-//   PM,
-// }
 var job = interfaces_1.default.WebDev;
 var phone = 'Pixel';
 var tablet = 3;
-// Functions in TypeScript
-//  ? for optional params
-// const sayWord = (word?: string): string => {
-//   console.log(word || 'Hello');
-//   return word || 'Hello';
-// };
-// sayWord();
-// Default Params
-// need not state types in parameters to run
-// Rest params work as expected
 var sayWord = function sayWord(word) {
     if (word === void 0) {
         word = 'Hello';
@@ -162,42 +147,24 @@ var sayWord = function sayWord(word) {
     return word;
 };
 sayWord('Scott', 'Wes');
-// Implicit Types in TS
 var newName = 'Scott';
-// newName = 'Wes';
-// newName = 10;
 newName = false;
 var newNameTwo = newName;
-// newNameTwo = 10;
-// Union Types with |
 var makeMargin = function makeMargin(x) {
     return "margin: " + x + "px;";
 };
 makeMargin(10);
 makeMargin('10');
-// Null Types
 var dog = 'Sammy';
 dog = null;
 dog = 'Lucie';
 dog = undefined;
-// dog = 10;
-// dog = false;
-// Interfaces
-// interface Person {
-//   name: string;
-//   age?: number; // ? Optional param
-// }
 var sayName = function sayName(_a) {
     var name = _a.name,
         age = _a.age;
     console.log(name);
     return name;
 };
-// This works too!
-// const sayName = ({ name, age }: Person): Person => {
-//   console.log(name);
-//   return { name, age };
-// };
 sayName({
     name: 'Scott',
     age: 32
@@ -206,8 +173,6 @@ sayName({
     age: 32,
     name: 'Scott'
 });
-// sayName(32, 'Scott');
-// Numeric Enums
 var Type;
 (function (Type) {
     Type[Type["Video"] = 0] = "Video";
@@ -217,19 +182,9 @@ var Type;
 var createContent = function createContent(contentType) {};
 createContent(Type.Quiz);
 console.log(Type.Quiz);
-// String Enums
-// enum Type2 {
-//   Video = 'VIDEO', // 0
-//   BlogPost = 'BLOG_POST', // 1
-//   Quiz = 'QUIZ', // 2
-// }
 var createContent2 = function createContent2(contentType) {};
 createContent2(interfaces_1.Type2.Quiz);
-// Classes
-var Team = /** @class */function () {
-    // public teamName: string; this is same as above
-    //private teamName: string; //prevents outside usage
-    //readonly teamName: string; prevents from being change
+var Team = function () {
     function Team(teamName) {
         this.teamName = teamName;
     }
@@ -242,7 +197,22 @@ var Team = /** @class */function () {
 var redWings = new Team('Red Wings');
 redWings.score();
 console.log(redWings.teamName);
-},{"./src/interfaces":15}],3:[function(require,module,exports) {
+var outputInput = function outputInput(arg) {
+    return arg;
+};
+var output = outputInput('hi');
+outputInput(3);
+var Dancer = function () {
+    function Dancer() {}
+    return Dancer;
+}();
+var ElNino = new Dancer();
+var fake = {
+    name: 'Scott',
+    year: 30
+};
+ElNino = fake;
+},{"./interfaces":6}],4:[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -271,7 +241,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '53216' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '54537' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -412,5 +382,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},[3,4], null)
-//# sourceMappingURL=/typescript.ea3dfd24.map
+},{}]},{},[4,4], null)
+//# sourceMappingURL=/src.aecaf12f.map
