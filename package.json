@@ -1,0 +1,23 @@
+{
+  "devDependencies": {
+    "typescript": "^4.0.5"
+  },
+  "name": "typescript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {},
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kennethchong39/typescript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kennethchong39/typescript/issues"
+  },
+  "homepage": "https://github.com/kennethchong39/typescript#readme",
+  "description": ""
+}
